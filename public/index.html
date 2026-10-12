@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Automator · Command center</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Automator home"><span class="brand-mark">a</span> automator<span class="brand-dot">.</span></a>
+    <span class="nav-label">YOUR WORKSPACE</span>
+    <nav><a class="active" href="#overview">◉ <span>Command center</span></a><a href="#tasks">▤ <span>Action queue</span></a><a href="#connections">⌘ <span>Connections</span></a><a href="#activity">↗ <span>Activity trail</span></a></nav>
+    <div class="sidebar-note"><span class="mini-dot"></span> Local prototype<p>You stay in control.<br>Every action leaves a trail.</p></div>
+    <div class="profile"><span class="avatar">A</span><div>Your workspace<small>Personal assistant</small></div></div>
+  </aside>
+  <main id="overview">
+    <header><div class="breadcrumb">Workspace <span>/</span> Command center</div><span class="mode-badge">SIMULATION MODE</span></header>
+    <section class="greeting"><div><div class="eyebrow">LESS COORDINATING. MORE DOING.</div><h1>A little more headspace.</h1><p>Turn a request into a clear plan. Review it. Let things move.</p></div><span class="date-label">Your personal command center</span></section>
+    <div class="overview-grid">
+      <section class="orbit-card"><div class="card-top"><span>WORKSPACE PULSE</span><span class="live"><i></i> Local</span></div><div class="orbit"><div class="orbit-ring"></div><span class="orbit-node node-one">◷</span><span class="orbit-node node-two">✉</span><span class="orbit-node node-three">✓</span><div class="orbit-core"><div class="core-icon">a<span>✦</span></div><strong>Ready when you are</strong><span>One place to move things forward</span></div></div><div class="orbit-footer"><span><i></i> Plans before actions</span><span>Connected demo workspace</span></div></section>
+      <section class="ask-card"><span class="eyebrow">WHAT CAN I TAKE OFF YOUR PLATE?</span><h2>Start with a request.</h2><p>Try a meeting, follow-up, or daily brief.</p><form id="request-form"><label class="sr-only" for="request">Your automation request</label><textarea id="request" maxlength="2000" required placeholder="Find time for a meeting tomorrow…"></textarea><div class="composer-footer"><span>One task at a time</span><button type="submit" id="plan-button">Create a plan <span>↗</span></button></div></form><div class="suggestions"><button type="button" data-prompt="Schedule a meeting tomorrow">◷ Find a meeting slot</button><button type="button" data-prompt="Draft a follow-up email">✉ Draft a follow-up</button><button type="button" data-prompt="Prepare my daily brief">✦ My daily brief</button></div><p class="demo-note">Demo data only. No connected accounts or real messages.</p></section>
+    </div>
+    <div id="notification" class="notification" role="status" aria-live="polite"></div>
+    <section class="stats" aria-label="Task statistics"><div><span>In your queue</span><strong id="stat-queue">0</strong><small>Waiting for your next move</small></div><div><span>Needs approval</span><strong id="stat-approval">0</strong><small>You make the final call</small></div><div><span>Completed simulations</span><strong id="stat-completed">0</strong><small>Recorded with a clear outcome</small></div></section>
+    <div class="bottom-grid"><section class="tasks-section" id="tasks"><div class="section-heading"><div><h2>Your action queue</h2><p>The plan, the reason, and the next step.</p></div><span class="count-pill" id="task-count">0 tasks</span></div><div id="task-list"></div></section><div class="right-column"><section id="connections" class="connections"><div class="section-heading"><h2>Connections</h2><span class="subtle">Demo</span></div><p class="connection-help">Pause one to try failure recovery.</p><div id="connector-list"></div></section><section id="activity" class="activity"><div class="section-heading"><h2>Activity trail</h2><span class="subtle">Local history</span></div><div id="event-list"></div></section></div></div>
+    <footer>Built around your decisions. <span>Prototype v0.1 · Fixed calendar sample: Oct 13, 2026 · America/New_York</span></footer>
+  </main><script type="module" src="/app.js"></script>
+</body></html>
